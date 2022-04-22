@@ -1,0 +1,30 @@
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+                    <form role="form text-left" method="POST">
+									{% csrf_token %}
+                					<div class="mb-3">
+                    					{% render_field form.title type="text" class="form-control" placeholder="title" aria-label="Name" aria-describedby="email-addon" %}
+									</div>
+										<div class="mb-3">
+                    					{% render_field form.photo type="image" class="form-control" placeholder="photo" aria-label="Name" aria-describedby="email-addon" %}
+									</div>
+										<div class="mb-3">
+                    					{% render_field form.prise type="text" class="form-control" placeholder="prise" aria-label="Name" aria-describedby="email-addon" %}
+									</div>
+                        <div class="mb-3">
+                    					{% render_field form.desciption type="text" class="form-control" placeholder="desciption" aria-label="Name" aria-describedby="email-addon" %}
+									</div>
+									<div class="text-center">
+
+          						        <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Sign up</button>
+									</div>
+
+                            </form>
+</body>
+</html>
